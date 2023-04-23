@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: '@project.name@'
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:ccpricedb
+    username: ccpricedb_user
+    password: ccpricedb_pass
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+server:
+  servlet:
+    context-path: /ccprice
